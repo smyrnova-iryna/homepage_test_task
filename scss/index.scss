@@ -1,0 +1,134 @@
+
+
+// Variables
+
+    // Fonts
+$main-font-family: "Noto Sans", sans-serif;
+$h2-font-family: "Poppins", sans-serif;
+
+    // Colors
+$text-color: #000000;
+$background: #f8f8f8;
+$brand-color: #df4e3c;
+$h2-option: #aeaeae;
+$text-possible-option: #8d8d8d;
+$validator-color: #507a36;
+$error: #ff2307;
+
+// Mixins
+@mixin common-text {
+  font-family: $main-font-family; 
+  font-weight: 400;
+  color: $font-color;
+}
+
+@mixin adaptive-flex-container {
+  display: flex;
+  flex-direction: column;
+  @media screen and (min-width: 576px) {
+    flex-direction: row;
+  }
+}
+
+@mixin main-page-text {
+  font-family: $main-font-family;
+  color: $background;
+  font-size: 15px;
+}
+
+
+// Main page styles
+.Main-Page {
+  background-image: url("../data/main_page_baackground.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  padding: 0;
+}
+
+.Main-Page-Header {
+  @include adaptive-flex-container();
+  min-height: 72px;
+  padding: 19px;
+  background: none;
+  
+  @media screen and (min-width: 768px) {
+    padding: 19px 100px;
+  }
+}
+
+.Main-Page-Logo {
+  width: 139px;
+  height: 35px;
+}
+
+.Main-Page-Nav {
+  @include adaptive-flex-container();
+  .Main-Page-Nav {
+    @include main-page-text();
+    font-weight: 500;
+  }
+}
+
+.Main-Page-Content {
+  padding: 0 30px 30px 30px;
+  @media screen and (min-width: 576px) {
+    padding-top: 118px;
+    padding-left: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+}
+
+.heading-1 {
+  font-size: 25px;
+  font-family: $main-font-family;
+  color: $background;
+  margin-bottom: 15px;
+  @media screen and (min-width: 576px) {
+    font-size: 50px;
+    padding-bottom: 32px;
+  }
+}
+
+.Main-Page-Content-Text-Container {
+  @include adaptive-flex-container();
+}
+
+.Main-Page-Content-Text {
+  @include main-page-text();
+  font-weight: 400;
+  max-width: 295px;
+  @media screen and (min-width: 576px) {
+    padding-bottom: 72px;
+    margin-right: 40px;
+  }
+}
+
+.Main-Page-Content-Button {
+  font-family: $main-font-family;
+  font-weight: 500;
+  font-size: 20px;
+  border-radius: 15px;
+  color: $background;
+  background: none;
+  border: 2px solid $background;
+  width: 296px;
+  height: 56px;
+  &:hover {
+    background-color: $background;
+    color: $text-color;
+  }
+  &:active {
+    color: $background;
+    background: none;
+  }
+  &:disabled {
+    opacity: 40%;
+  }
+  
+}
+
+

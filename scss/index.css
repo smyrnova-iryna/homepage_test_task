@@ -1,0 +1,120 @@
+.Main-Page {
+  background-image: url("../data/main_page_baackground.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  padding: 0;
+}
+
+.Main-Page-Header {
+  display: flex;
+  flex-direction: column;
+  min-height: 72px;
+  padding: 19px;
+  background: none;
+}
+@media screen and (min-width: 576px) {
+  .Main-Page-Header {
+    flex-direction: row;
+  }
+}
+@media screen and (min-width: 768px) {
+  .Main-Page-Header {
+    padding: 19px 100px;
+  }
+}
+
+.Main-Page-Logo {
+  width: 139px;
+  height: 35px;
+}
+
+.Main-Page-Nav {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 576px) {
+  .Main-Page-Nav {
+    flex-direction: row;
+  }
+}
+.Main-Page-Nav .Main-Page-Nav {
+  font-family: "Noto Sans", sans-serif;
+  color: #f8f8f8;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.Main-Page-Content {
+  padding: 0 30px 30px 30px;
+}
+@media screen and (min-width: 576px) {
+  .Main-Page-Content {
+    padding-top: 118px;
+    padding-left: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+}
+
+.heading-1 {
+  font-size: 25px;
+  font-family: "Noto Sans", sans-serif;
+  color: #f8f8f8;
+  margin-bottom: 15px;
+}
+@media screen and (min-width: 576px) {
+  .heading-1 {
+    font-size: 50px;
+    padding-bottom: 32px;
+  }
+}
+
+.Main-Page-Content-Text-Container {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 576px) {
+  .Main-Page-Content-Text-Container {
+    flex-direction: row;
+  }
+}
+
+.Main-Page-Content-Text {
+  font-family: "Noto Sans", sans-serif;
+  color: #f8f8f8;
+  font-size: 15px;
+  font-weight: 400;
+  max-width: 295px;
+}
+@media screen and (min-width: 576px) {
+  .Main-Page-Content-Text {
+    padding-bottom: 72px;
+    margin-right: 40px;
+  }
+}
+
+.Main-Page-Content-Button {
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  border-radius: 15px;
+  color: #f8f8f8;
+  background: none;
+  border: 2px solid #f8f8f8;
+  width: 296px;
+  height: 56px;
+}
+.Main-Page-Content-Button:hover {
+  background-color: #f8f8f8;
+  color: #000000;
+}
+.Main-Page-Content-Button:active {
+  color: #f8f8f8;
+  background: none;
+}
+.Main-Page-Content-Button:disabled {
+  opacity: 40%;
+}/*# sourceMappingURL=index.css.map */
