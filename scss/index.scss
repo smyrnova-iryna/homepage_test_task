@@ -71,6 +71,14 @@ $error: #ff2307;
   }
 }
 
+.Main-Page-Nav-Icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+
 .Main-Page-Content {
   padding: 0 30px 30px 30px;
   @media screen and (min-width: 576px) {
