@@ -927,7 +927,33 @@ const checkboxHandler = () => {
     showButtonHandler();
 }
 
+const marker = document.getElementById("emailValidationMarker");
 
+const validateEmail = (emailValue) => {
+    const cross = document.getElementById("crossSign");
+    const tick = document.getElementById("tickSign");
+    const input = document.getElementById("emailInput");
+    const sign = document.getElementById("basic-addon2");
+    var regExp = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
+    if (!regExp.test(String(emailValue).toLowerCase())) {
+        marker.innerText = "Incorrect email";
+        cross.style = "display: block";
+        tick.style = "display: none";
+        input.style = "border: 1px solid #df4e3c; border-right: none";
+        sign.style = "border: 1px solid #df4e3c; border-left: none";
+    } else {
+        marker.innerText = "";  
+        tick.style = "display: block";
+        cross.style = "display: none"; 
+        input.style = "border: 1px solid #507a36; border-right: none";
+        sign.style = "border: 1px solid #507a36; border-left: none";
+    }
+  }
 
+const form = document.getElementById("emailForm")
 
+  form.addEventListener('submit', e => {
+    if(marker.innerText === "Incorrect email")
+        e.preventDefault()
+})
 

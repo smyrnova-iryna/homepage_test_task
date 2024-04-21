@@ -96,6 +96,31 @@
                 </div>    
         </article>
     </section>
+    <section class="Subscribe-Section">
+        <div class="Subscribe-Section-Text-Container">
+            <h4 class="Subscribe-Section-Heading">Haven't found a suitable vehicle?</h4>
+            <p>Sign up for our newsletter and be the first to know when we publish new vehicle offers.</p>
+        </div>
+        <form class="Subscribe-Section-Buttons-Container" id="emailForm">
+            <div class="Input-Wrap">
+                <!-- <input class="Subscribe-Section-Input" onchange="validateEmail(event.target.value)" placeholder="Enter your email"> -->
+                <div class="Input-Inner-Wrap input-group mb-3">
+                    <input id="emailInput" type="text" class="Subscribe-Section-Input form-control" onchange="validateEmail(event.target.value)" placeholder="Enter your email" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                    <span class="Subscribe-Section-Input-Validation-Sign input-group-text" id="basic-addon2">
+                        <svg id="crossSign" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13.5 4.5L4.5 13.5" stroke="#DF4E3C" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M4.5 4.5L13.5 13.5" stroke="#FF2307" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        <svg id="tickSign" width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.750001 6.5L3.75 8.75L10.5 0.5" stroke="#507A36"/>
+                        </svg>    
+                    </span>
+                  </div>
+                <span id="emailValidationMarker"></span>
+            </div>
+            <button class="Subscribe-Section-Button" type="submit">Subscribe now</button>
+        </form>
+    </section>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="./index.js"></script>
 </body>

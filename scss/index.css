@@ -189,6 +189,10 @@
   height: 48px;
   justify-content: space-between;
 }
+.Select-Button:focus, .Select-Button::before {
+  box-shadow: none;
+  outline: none;
+}
 @media screen and (min-width: 600px) {
   .Select-Button {
     width: 20vw;
@@ -271,6 +275,10 @@
   border: none;
   background-color: #df4e3c;
   color: #f8f8f8;
+}
+.Extra-Cars-Button:focus, .Extra-Cars-Button::before {
+  box-shadow: none;
+  outline: none;
 }
 @media screen and (min-width: 600px) {
   .Extra-Cars-Button {
@@ -523,4 +531,153 @@
 
 .Catalog-Item:hover .Catalog-Model {
   text-decoration: underline;
+}
+
+.Subscribe-Section, .Subscribe-Section-Text-Container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.Subscribe-Section {
+  background-color: #000000;
+  width: 100%;
+  color: #f8f8f8;
+  min-width: 174px;
+  padding: 30px;
+}
+@media screen and (min-width: 960px) {
+  .Subscribe-Section {
+    flex-direction: row;
+    align-items: center;
+    padding: 60px 100px;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .Subscribe-Section-Text-Container {
+    width: 505px;
+  }
+}
+
+.Subscribe-Section-Heading {
+  font-size: 20px;
+  font-weight: 600;
+}
+@media screen and (min-width: 576px) {
+  .Subscribe-Section-Heading {
+    font-size: 25px;
+  }
+}
+
+.Subscribe-Section-Buttons-Container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+@media screen and (min-width: 576px) {
+  .Subscribe-Section-Buttons-Container {
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: flex-start;
+  }
+}
+
+.Subscribe-Section-Button, .Subscribe-Section-Input {
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 400;
+  color: #000000;
+  border-radius: 15px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  height: 54px;
+}
+.Subscribe-Section-Button:focus, .Subscribe-Section-Button::before, .Subscribe-Section-Input:focus, .Subscribe-Section-Input::before {
+  box-shadow: none;
+  outline: none;
+}
+
+.Input-Inner-Wrap, .Subscribe-Section-Button {
+  width: 250px;
+}
+
+#crossSign, #tickSign {
+  display: none;
+}
+
+.Subscribe-Section-Input {
+  background: none;
+  color: #f8f8f8;
+  border: 1px solid #BDBDBD;
+  border-right: none;
+}
+.Subscribe-Section-Input::-moz-placeholder {
+  color: #f8f8f8;
+  font-weight: 400;
+}
+.Subscribe-Section-Input::placeholder {
+  color: #f8f8f8;
+  font-weight: 400;
+}
+.Subscribe-Section-Input:focus {
+  background: none;
+  box-shadow: none;
+  border: 1px solid #8d8d8d;
+  border-right: none;
+  color: #f8f8f8;
+}
+.Subscribe-Section-Input:focus::-moz-placeholder {
+  visibility: hidden;
+}
+.Subscribe-Section-Input:focus::placeholder {
+  visibility: hidden;
+}
+.Subscribe-Section-Input:focus .Subscribe-Section-Input-Validation-Sign {
+  border: 1px solid #8d8d8d;
+}
+
+.Subscribe-Section-Input-Validation-Sign {
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 400;
+  color: #000000;
+  border-radius: 15px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  background: none;
+  border: 1px solid #8d8d8d;
+  border-left: none;
+}
+.Subscribe-Section-Input-Validation-Sign:focus, .Subscribe-Section-Input-Validation-Sign::before {
+  box-shadow: none;
+  outline: none;
+}
+
+.Input-Wrap {
+  position: relative;
+}
+
+#emailValidationMarker {
+  font-size: 10px;
+  color: #df4e3c;
+  position: absolute;
+  top: 61px;
+  left: 20px;
+}
+
+@media screen and (min-width: 1260px) {
+  .Subscribe-Section-Button {
+    width: 190px;
+  }
+  .Input-Inner-Wrap {
+    width: 505px;
+  }
 }/*# sourceMappingURL=index.css.map */
