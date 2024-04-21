@@ -33,6 +33,8 @@
 .Main-Page-Nav {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
+  padding-left: 0;
 }
 @media screen and (min-width: 576px) {
   .Main-Page-Nav {
@@ -47,6 +49,7 @@
 }
 
 .Main-Page-Nav-Icons {
+  padding-left: 0;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -679,5 +682,25 @@
   }
   .Input-Inner-Wrap {
     width: 505px;
+  }
+}
+.Footer {
+  background-color: #000000;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+@media screen and (min-width: 768px) {
+  .Footer {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 36px 100px 37px 80px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .Footer-Nav {
+    gap: 40px;
   }
 }/*# sourceMappingURL=index.css.map */
