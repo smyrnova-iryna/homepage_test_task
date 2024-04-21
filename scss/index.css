@@ -52,6 +52,11 @@
   justify-content: space-between;
   gap: 24px;
 }
+@media screen and (max-width: 576px) {
+  .Main-Page-Nav-Icons {
+    width: 25px;
+  }
+}
 
 .Main-Page-Content {
   padding: 0 30px 30px 30px;
@@ -114,6 +119,11 @@
   width: 296px;
   height: 56px;
 }
+@media screen and (max-width: 576px) {
+  .Main-Page-Content-Button {
+    width: 100%;
+  }
+}
 .Main-Page-Content-Button:hover {
   background-color: #f8f8f8;
   color: #000000;
@@ -124,4 +134,393 @@
 }
 .Main-Page-Content-Button:disabled {
   opacity: 40%;
+}
+
+.Offers-Page {
+  background-color: #f8f8f8;
+  padding: 30px;
+}
+@media screen and (min-width: 576px) {
+  .Offers-Page {
+    padding: 100px;
+  }
+}
+
+.heading-2 {
+  font-family: "Poppins", sans-serif;
+  color: #aeaeae;
+  font-size: 25px;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 576px) {
+  .heading-2 {
+    font-size: 50px;
+    font-weight: 700;
+    margin-bottom: 80px;
+  }
+}
+
+.Offers-Page-Buttons-Container {
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 10px;
+}
+@media screen and (min-width: 600px) {
+  .Offers-Page-Buttons-Container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.Select-Button {
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 400;
+  color: #000000;
+  border-radius: 15px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  width: 100%;
+  border: 1px solid #8d8d8d;
+  background-color: #f8f8f8;
+  height: 48px;
+  justify-content: space-between;
+}
+@media screen and (min-width: 600px) {
+  .Select-Button {
+    width: 20vw;
+  }
+}
+@media screen and (min-width: 1140px) {
+  .Select-Button {
+    width: 110px;
+  }
+}
+@media screen and (min-width: 1420px) {
+  .Select-Button {
+    width: 170px;
+  }
+}
+.Select-Button:focus {
+  border: 1px solid #8d8d8d;
+}
+.Select-Button:active {
+  border: 1px solid #8d8d8d;
+}
+.Select-Button::after {
+  border: 1px solid #8d8d8d;
+}
+
+.Select-Button-Wrap {
+  position: relative;
+}
+
+.Select-Options-Container {
+  width: 100%;
+  display: none;
+  position: absolute;
+  top: 34px;
+  left: 0;
+  padding: 0px 16px 0px 16px;
+  list-style-type: none;
+  background-color: #f8f8f8;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border: 1px solid #8d8d8d;
+  border-top: none;
+  z-index: 100;
+}
+@media screen and (min-width: 600px) {
+  .Select-Options-Container {
+    width: 20vw;
+  }
+}
+@media screen and (min-width: 1140px) {
+  .Select-Options-Container {
+    width: 110px;
+  }
+}
+@media screen and (min-width: 1420px) {
+  .Select-Options-Container {
+    width: 170px;
+  }
+}
+
+.Dropdown-Item {
+  cursor: pointer;
+}
+.Dropdown-Item:hover {
+  color: #df4e3c;
+}
+
+.Extra-Cars-Button {
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 400;
+  color: #000000;
+  border-radius: 15px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  width: 100%;
+  height: 48px;
+  border: none;
+  background-color: #df4e3c;
+  color: #f8f8f8;
+}
+@media screen and (min-width: 600px) {
+  .Extra-Cars-Button {
+    width: 20vw;
+  }
+}
+@media screen and (min-width: 1140px) {
+  .Extra-Cars-Button {
+    width: 110px;
+  }
+}
+@media screen and (min-width: 1420px) {
+  .Extra-Cars-Button {
+    width: 170px;
+  }
+}
+@media screen and (min-width: 1420px) {
+  .Extra-Cars-Button {
+    width: 290px;
+  }
+}
+.Extra-Cars-Button:hover {
+  background-color: #f8f8f8;
+  color: #df4e3c;
+  border: 2px solid #df4e3c;
+}
+.Extra-Cars-Button:active {
+  border: none;
+  background-color: #df4e3c;
+  color: #f8f8f8;
+}
+.Extra-Cars-Button:disabled {
+  opacity: 40%;
+}
+
+.Offers-Page-Checkbox-Container {
+  flex-direction: column;
+  font-size: 12px;
+  padding: 30px 0;
+}
+@media screen and (min-width: 780px) {
+  .Offers-Page-Checkbox-Container {
+    flex-direction: row;
+    padding: 24px 0;
+  }
+}
+
+.Offers-Page-Checkbox {
+  border: 2px solid #8d8d8d;
+}
+.Offers-Page-Checkbox:checked {
+  border: none;
+  box-shadow: none;
+  background-color: #df4e3c;
+}
+.Offers-Page-Checkbox:focus, .Offers-Page-Checkbox::before {
+  box-shadow: none;
+}
+.Offers-Page-Checkbox:focus:not(:checked) {
+  border: 2px solid #8d8d8d;
+}
+
+.Sort-Button-Wrap {
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 237px;
+}
+
+.Sort-Asc-Icon {
+  display: none;
+}
+
+.Sort-Button {
+  border: none;
+  background: none;
+  height: 16px;
+}
+
+.Sort-Button-Default {
+  color: #8d8d8d;
+  cursor: pointer;
+  text-align: left;
+  min-width: 160px;
+}
+.Sort-Button-Default:hover {
+  color: #df4e3c;
+}
+
+.Sort-Options-Container {
+  border-top: 1px solid #8d8d8d;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  top: 20px;
+  left: 60px;
+  width: 191px;
+  padding: 6px 12px;
+}
+@media screen and (min-width: 576px) {
+  .Sort-Options-Container {
+    left: 70px;
+  }
+}
+
+.Show-Button-Value {
+  margin-right: 4px;
+}
+
+.Offers-Page-Catalog-Container {
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+@media screen and (min-width: 1130px) {
+  .Offers-Page-Catalog-Container {
+    justify-content: left;
+  }
+}
+
+.Catalog-Item {
+  width: 230px;
+  justify-content: center;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 13px;
+  position: relative;
+  background-color: #FFFFFF;
+  font-size: 12px;
+  font-weight: 400;
+  min-height: 306px;
+  cursor: pointer;
+}
+@media screen and (min-width: 420px) {
+  .Catalog-Item {
+    font-size: 17px;
+  }
+}
+@media screen and (min-width: 420px) {
+  .Catalog-Item {
+    height: 366px;
+    width: 295px;
+  }
+}
+
+.Catalog-Status-Caption {
+  position: absolute;
+  top: 146px;
+  left: 0;
+  width: 66px;
+  height: 24px;
+  color: #f8f8f8;
+  background-color: #000000;
+  font-size: 12px;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+@media screen and (min-width: 420px) {
+  .Catalog-Status-Caption {
+    top: 176px;
+  }
+}
+
+.Catalog-Sold-Caption {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: none;
+  width: 100%;
+  height: 170px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 50px;
+  font-weight: 700;
+  color: #FFFFFF;
+}
+@media screen and (min-width: 420px) {
+  .Catalog-Sold-Caption {
+    height: 200px;
+  }
+}
+
+.Catalog-Image {
+  width: 100%;
+  height: 170px;
+}
+@media screen and (min-width: 420px) {
+  .Catalog-Image {
+    height: 200px;
+    width: 295px;
+  }
+}
+
+.Catalog-Caption-Container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px 20px 28px 20px;
+}
+
+.Catalog-Title {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  gap: 8px;
+  height: 23px;
+  max-height: -moz-min-content;
+  max-height: min-content;
+  margin-bottom: 13px;
+}
+
+.Catalog-Model {
+  font-size: 12px;
+  font-weight: 400;
+}
+@media screen and (min-width: 420px) {
+  .Catalog-Model {
+    font-size: 17px;
+  }
+}
+
+.Catalog-Year {
+  color: #8d8d8d;
+}
+
+.Catalog-Params {
+  color: #8d8d8d;
+  font-weight: 300;
+  margin-bottom: 26px;
+}
+@media screen and (min-width: 420px) {
+  .Catalog-Params {
+    font-size: 14px;
+  }
+}
+
+.Catalog-Price {
+  font-size: 15px;
+  font-size: 500;
+}
+@media screen and (min-width: 420px) {
+  .Catalog-Price {
+    font-size: 20px;
+  }
+}
+
+.Catalog-Item:hover .Catalog-Model {
+  text-decoration: underline;
 }/*# sourceMappingURL=index.css.map */

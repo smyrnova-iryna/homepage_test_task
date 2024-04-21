@@ -14,12 +14,15 @@ $h2-option: #aeaeae;
 $text-possible-option: #8d8d8d;
 $validator-color: #507a36;
 $error: #ff2307;
+$catalog-container-color: #FFFFFF;
+
+$border-radius: 15px;
 
 // Mixins
 @mixin common-text {
   font-family: $main-font-family; 
   font-weight: 400;
-  color: $font-color;
+  color: $text-color;
 }
 
 @mixin adaptive-flex-container {
@@ -34,6 +37,36 @@ $error: #ff2307;
   font-family: $main-font-family;
   color: $background;
   font-size: 15px;
+}
+
+@mixin button-styles {
+  @include common-text();
+  border-radius: $border-radius;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+}
+
+@mixin disabled-button {
+  &:disabled {
+    opacity: 40%;
+  }
+}
+
+@mixin select-responsive-styles {
+  width: 100%;
+  @media screen and (min-width: 600px) {
+    width: 20vw
+  }
+  @media screen and (min-width: 1140px) {
+    width: 110px;
+  }
+  @media screen and (min-width: 1420px) {
+    width: 170px;
+
+  }
 }
 
 
@@ -72,6 +105,9 @@ $error: #ff2307;
 }
 
 .Main-Page-Nav-Icons {
+  @media screen and (max-width: 576px) {
+    width: 25px;
+  }
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -116,10 +152,13 @@ $error: #ff2307;
 }
 
 .Main-Page-Content-Button {
+  @media screen and (max-width: 576px) {
+    width: 100%;
+  }
   font-family: $main-font-family;
   font-weight: 500;
   font-size: 20px;
-  border-radius: 15px;
+  border-radius: $border-radius;
   color: $background;
   background: none;
   border: 2px solid $background;
@@ -133,10 +172,319 @@ $error: #ff2307;
     color: $background;
     background: none;
   }
-  &:disabled {
-    opacity: 40%;
+  @include disabled-button()
+}
+
+
+// Offers Page styles
+.Offers-Page {
+  background-color: $background;
+  padding: 30px;
+  @media screen and (min-width: 576px) {
+    padding: 100px;
+  }
+}
+
+.heading-2 {
+  font-family: $h2-font-family;
+  color: $h2-option;
+  font-size: 25px;
+  font-weight: 500;
+  margin-bottom: 30px;
+  @media screen and (min-width: 576px) {
+    font-size: 50px;
+    font-weight: 700;
+    margin-bottom: 80px;
+  }
+}
+
+.Offers-Page-Buttons-Container {
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 10px;
+
+  @media screen and (min-width: 600px) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+}
+
+
+.Select-Button {
+  @include button-styles();
+  @include select-responsive-styles();
+  border: 1px solid $text-possible-option;
+  background-color: $background;
+  height: 48px;
+  justify-content: space-between;
+ 
+  &:focus {
+    border: 1px solid $text-possible-option;
+  }
+  &:active {
+    border: 1px solid $text-possible-option;
+  }
+  &::after {
+    border: 1px solid $text-possible-option;
   }
   
 }
 
+.Select-Button-Wrap {
+  position: relative;
+}
 
+.Select-Options-Container {
+  @include select-responsive-styles();
+  display: none;
+  position: absolute;
+  top: 34px;
+  left: 0;
+  padding: 0px 16px 0px 16px;
+  list-style-type: none;
+  background-color: $background;
+  border-bottom-left-radius: $border-radius;
+  border-bottom-right-radius: $border-radius;
+  border: 1px solid $text-possible-option;
+  border-top: none;
+  z-index: 100;
+}
+
+
+.Dropdown-Item {
+  cursor: pointer;
+  &:hover {
+    color: $brand-color;
+  }
+}
+
+.Extra-Cars-Button {
+  @include button-styles();
+  @include select-responsive-styles();
+  height: 48px;
+  border: none;
+  background-color: $brand-color;
+  color: $background;
+  @media screen and (min-width: 1420px) {
+    width: 290px;
+  }
+
+
+  &:hover {
+    background-color: $background;
+    color: $brand-color;
+    border: 2px solid $brand-color;
+  }
+  &:active {
+    border: none;
+    background-color: $brand-color;
+    color: $background;
+  }
+  @include disabled-button()
+}
+
+.Offers-Page-Checkbox-Container {
+  flex-direction: column;
+  font-size: 12px;
+  padding: 30px 0;
+  @media screen and (min-width: 780px) {
+    flex-direction: row;
+    padding: 24px 0;
+  }
+}
+
+.Offers-Page-Checkbox {
+  border: 2px solid $text-possible-option;
+  &:checked {
+    border: none;
+    box-shadow: none;
+    background-color: $brand-color;
+  }
+  &:focus, &::before{
+    box-shadow: none;
+  }
+  &:focus:not(:checked) {
+    border: 2px solid $text-possible-option;
+  }
+
+}
+
+.Sort-Button-Wrap {
+   flex-direction: row;
+   align-items: center;
+   justify-content: space-between;
+   width: 237px;
+}
+
+.Sort-Asc-Icon {
+  display: none;
+}
+
+.Sort-Button {
+  border: none;
+  background: none;
+  height: 16px;
+}
+
+.Sort-Button-Default {
+  color: $text-possible-option;
+  cursor: pointer;
+  text-align: left;
+  min-width: 160px;
+  &:hover {
+    color: $brand-color;
+  }
+}
+
+.Sort-Options-Container {
+  border-top: 1px solid $text-possible-option;
+  border-top-left-radius: $border-radius;
+  border-top-right-radius: $border-radius;
+  top: 20px;
+  left: 60px;
+  width: 191px;
+  padding: 6px 12px;
+  @media screen and (min-width: 576px) {
+    left: 70px;
+  }
+
+}
+
+.Show-Button-Value {
+  margin-right: 4px;
+}
+
+@mixin catalog-adaptive-text {
+  font-size: 12px;
+  font-weight: 400;
+  @media screen and (min-width: 420px) {
+    font-size: 17px;
+  }
+}
+
+.Offers-Page-Catalog-Container {
+  justify-content: center;
+  flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+  @media screen and (min-width: 1130px) {
+    justify-content: left;
+  }
+
+}
+
+.Catalog-Item {
+  width: 230px;
+  justify-content: center;
+  font-family: $main-font-family;
+  font-size: 13px;
+  position: relative;
+  background-color: $catalog-container-color;
+  @include catalog-adaptive-text();
+  min-height: 306px;
+  cursor: pointer;
+  @media screen and (min-width: 420px) {
+    height: 366px;
+    width: 295px;
+  }
+  
+}
+
+.Catalog-Status-Caption {
+  position: absolute;
+  top: 146px;
+  left: 0;
+  width: 66px;
+  height: 24px;
+  color: $background;
+  background-color: $text-color;
+  font-size: 12px;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  @media screen and (min-width: 420px) {
+   top: 176px;
+  }
+}
+
+.Catalog-Sold-Caption {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: none;
+  width: 100%;
+  height: 170px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 50px;
+  font-weight: 700;
+  color: $catalog-container-color;
+  @media screen and (min-width: 420px) {
+    height: 200px;
+  }
+}
+
+.Catalog-Image {
+  width: 100%;
+  height: 170px;
+  @media screen and (min-width: 420px) {
+    height: 200px;
+    width: 295px;
+  }
+}
+
+.Catalog-Caption-Container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px 20px 28px 20px;
+}
+
+
+
+.Catalog-Title {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  gap: 8px;
+  height: 23px;
+  max-height: min-content;
+  margin-bottom: 13px
+}
+
+.Catalog-Model {
+  @include catalog-adaptive-text();
+
+}
+
+.Catalog-Year {
+  color: $text-possible-option;
+}
+
+.Catalog-Params {
+  color: $text-possible-option;
+  font-weight: 300;
+  margin-bottom: 26px;
+  @media screen and (min-width: 420px) {
+    font-size: 14px;
+  }
+}
+
+.Catalog-Price {
+  font-size: 15px;
+  font-size: 500;
+  @media screen and (min-width: 420px) {
+    font-size: 20px;
+  }
+}
+
+.Catalog-Item:hover {
+  .Catalog-Model {
+    text-decoration: underline;
+  }
+}
