@@ -14,14 +14,10 @@
   padding: 19px;
   background: none;
 }
-@media screen and (min-width: 576px) {
-  .Main-Page-Header {
-    flex-direction: row;
-  }
-}
 @media screen and (min-width: 768px) {
   .Main-Page-Header {
     padding: 19px 100px;
+    flex-direction: row;
   }
 }
 
@@ -33,6 +29,10 @@
 .Main-Page-Nav {
   display: flex;
   flex-direction: column;
+  font-family: "Noto Sans", sans-serif;
+  color: #f8f8f8;
+  font-size: 15px;
+  font-weight: 500;
   align-items: flex-start;
   padding-left: 0;
 }
@@ -41,11 +41,10 @@
     flex-direction: row;
   }
 }
-.Main-Page-Nav .Main-Page-Nav {
-  font-family: "Noto Sans", sans-serif;
-  color: #f8f8f8;
-  font-size: 15px;
-  font-weight: 500;
+@media screen and (min-width: 900px) {
+  .Main-Page-Nav {
+    gap: 40px;
+  }
 }
 
 .Main-Page-Nav-Icons {

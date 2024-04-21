@@ -94,13 +94,15 @@ $border-radius: 15px;
 }
 
 .Main-Page-Header {
-  @include adaptive-flex-container();
+  display: flex;
+  flex-direction: column;
   min-height: 72px;
   padding: 19px;
   background: none;
   
   @media screen and (min-width: 768px) {
     padding: 19px 100px;
+    flex-direction: row;
   }
 }
 
@@ -111,11 +113,12 @@ $border-radius: 15px;
 
 .Main-Page-Nav {
   @include adaptive-flex-container();
+  @include main-page-text();
+  font-weight: 500;
   align-items: flex-start;
   padding-left: 0;
-  .Main-Page-Nav {
-    @include main-page-text();
-    font-weight: 500;
+  @media screen and (min-width: 900px) {
+    gap: 40px;
   }
 }
 
