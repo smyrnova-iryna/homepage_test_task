@@ -524,6 +524,83 @@ const currentOffers = [
 ]
 
 
+const popularQuestions = [
+    {
+        id: 1,
+        value: "1. Scope",
+        details: [
+            "1.1 The statutory warranty is completely excluded to the extent permitted by law.",
+            "1.2 If the vehicle still has a current factory warranty, a sales representative (brand representative) of the manufacturer shall provide the services owed therein. If there is a factory warranty, the beginning of the warranty for new vehicles or vehicles with a current manufacturer's warranty is not the date of the first placing on the market, but the beginning of the warranty in the manufacturer's system or the contractually agreed beginning of the warranty, if any.",
+            "1.3 If there is a special warranty insurance for the vehicle, this will take the place of the material warranty according to section 3.1 and replace it. In this case, the General Terms and Conditions of the respective warranty service provider apply."
+        ]
+    },
+    {
+        id: 2,
+        value: "2. Vehicle characteristics",
+        details: [
+            "2.1 The statutory warranty is completely excluded to the extent permitted by law.",
+            "2.2 If the vehicle still has a current factory warranty, a sales representative (brand representative) of the manufacturer shall provide the services owed therein. If there is a factory warranty, the beginning of the warranty for new vehicles or vehicles with a current manufacturer's warranty is not the date of the first placing on the market, but the beginning of the warranty in the manufacturer's system or the contractually agreed beginning of the warranty, if any.",
+            "2.3 If there is a special warranty insurance for the vehicle, this will take the place of the material warranty according to section 3.1 and replace it. In this case, the General Terms and Conditions of the respective warranty service provider apply."
+        ]
+    },
+    {
+        id: 3,
+        value: "3. Warranty / guarantee",
+        details: [
+            "3.1 The statutory warranty is completely excluded to the extent permitted by law.",
+            "3.2 If the vehicle still has a current factory warranty, a sales representative (brand representative) of the manufacturer shall provide the services owed therein. If there is a factory warranty, the beginning of the warranty for new vehicles or vehicles with a current manufacturer's warranty is not the date of the first placing on the market, but the beginning of the warranty in the manufacturer's system or the contractually agreed beginning of the warranty, if any.",
+            "3.3 If there is a special warranty insurance for the vehicle, this will take the place of the material warranty according to section 3.1 and replace it. In this case, the General Terms and Conditions of the respective warranty service provider apply."
+        ]
+    },
+    {
+        id: 4,
+        value: "4. Trade-in vehicle",
+        details: [
+            "4.1 The statutory warranty is completely excluded to the extent permitted by law.",
+            "4.2 If the vehicle still has a current factory warranty, a sales representative (brand representative) of the manufacturer shall provide the services owed therein. If there is a factory warranty, the beginning of the warranty for new vehicles or vehicles with a current manufacturer's warranty is not the date of the first placing on the market, but the beginning of the warranty in the manufacturer's system or the contractually agreed beginning of the warranty, if any.",
+            "4.3 If there is a special warranty insurance for the vehicle, this will take the place of the material warranty according to section 3.1 and replace it. In this case, the General Terms and Conditions of the respective warranty service provider apply."
+        ]
+    },
+    {
+        id: 5,
+        value: "5. Home Delivery",
+        details: [
+            "5.1 The statutory warranty is completely excluded to the extent permitted by law.",
+            "5.2 If the vehicle still has a current factory warranty, a sales representative (brand representative) of the manufacturer shall provide the services owed therein. If there is a factory warranty, the beginning of the warranty for new vehicles or vehicles with a current manufacturer's warranty is not the date of the first placing on the market, but the beginning of the warranty in the manufacturer's system or the contractually agreed beginning of the warranty, if any.",
+            "5.3 If there is a special warranty insurance for the vehicle, this will take the place of the material warranty according to section 3.1 and replace it. In this case, the General Terms and Conditions of the respective warranty service provider apply."
+        ]
+    },
+    {
+        id: 6,
+        value: "6. Right of return",
+        details: [
+            "6.1 The statutory warranty is completely excluded to the extent permitted by law.",
+            "6.2 If the vehicle still has a current factory warranty, a sales representative (brand representative) of the manufacturer shall provide the services owed therein. If there is a factory warranty, the beginning of the warranty for new vehicles or vehicles with a current manufacturer's warranty is not the date of the first placing on the market, but the beginning of the warranty in the manufacturer's system or the contractually agreed beginning of the warranty, if any.",
+            "6.3 If there is a special warranty insurance for the vehicle, this will take the place of the material warranty according to section 3.1 and replace it. In this case, the General Terms and Conditions of the respective warranty service provider apply."
+        ]
+    },
+    {
+        id: 7,
+        value: "7. Written form",
+        details: [
+            "7.1 The statutory warranty is completely excluded to the extent permitted by law.",
+            "7.2 If the vehicle still has a current factory warranty, a sales representative (brand representative) of the manufacturer shall provide the services owed therein. If there is a factory warranty, the beginning of the warranty for new vehicles or vehicles with a current manufacturer's warranty is not the date of the first placing on the market, but the beginning of the warranty in the manufacturer's system or the contractually agreed beginning of the warranty, if any.",
+            "7.3 If there is a special warranty insurance for the vehicle, this will take the place of the material warranty according to section 3.1 and replace it. In this case, the General Terms and Conditions of the respective warranty service provider apply."
+        ]
+    },
+    {
+        id: 8,
+        value: "8. Applicable law and place of jurisdiction",
+        details: [
+            "8.1 The statutory warranty is completely excluded to the extent permitted by law.",
+            "8.2 If the vehicle still has a current factory warranty, a sales representative (brand representative) of the manufacturer shall provide the services owed therein. If there is a factory warranty, the beginning of the warranty for new vehicles or vehicles with a current manufacturer's warranty is not the date of the first placing on the market, but the beginning of the warranty in the manufacturer's system or the contractually agreed beginning of the warranty, if any.",
+            "8.3 If there is a special warranty insurance for the vehicle, this will take the place of the material warranty according to section 3.1 and replace it. In this case, the General Terms and Conditions of the respective warranty service provider apply."
+        ]
+    },
+];
+
+
+
 const displayCarsCatalog = (sortedArray) => {
     const container = document.getElementById("catalogContainer");
     sortedArray.forEach(function(item) {
@@ -926,6 +1003,68 @@ const checkboxHandler = () => {
     }
     showButtonHandler();
 }
+
+const displayPopularQuestions = () => {
+    const container = document.getElementById("popularQuestionsContainer");
+    popularQuestions.forEach(function(item) {
+
+        const iconClickHandler = () => {
+            if (icon.innerText === "+") {
+                item.details.forEach(function(textBlock) {
+                    const content = document.createElement("p");
+                    content.className = "Popular-Questions-Content";
+                    content.innerText = textBlock;
+                    contentWrap.appendChild(content)
+                })
+                icon.innerText = "-";
+                icon.style = "color: #df4e3c";
+                heading.style = "color: #df4e3c";
+                headingWrap.style = "border-bottom: none; background-color: #FFFFFF";
+                contentWrap.style = "display: flex; background-color: #FFFFFF";
+                commonWrap.style = "box-shadow: 0px 0px 18px 0px #44444417; border-top: 1px solid white; margin-top: -1px"
+            } else {
+                contentWrap.innerText = "";
+                icon.innerText = "+";
+                icon.style = "color: #000000";
+                heading.style = "color: #000000";
+                headingWrap.style = "border-bottom: 1px solid #C4C4C4";
+                commonWrap.style = "box-shadow: none"
+                contentWrap.style = "display: none"
+            }
+        }
+
+        const commonWrap = document.createElement('div');
+        commonWrap.className = "Popular-Questions-Common-Wrap";
+        container.appendChild(commonWrap);
+
+
+        const headingWrap = document.createElement('div');
+        headingWrap.className = "Popular-Questions-Heading-Wrap";
+        headingWrap.onclick = iconClickHandler;
+        commonWrap.appendChild(headingWrap);
+
+        const heading = document.createElement('p');
+        heading.className = "Popular-Questions-Title";
+        heading.innerText = item.value;
+        headingWrap.appendChild(heading);
+
+        const icon = document.createElement('p');
+        icon.innerText = "+";
+        icon.className = "Popular-Questions-Title";
+        headingWrap.appendChild(icon);
+
+        const contentWrap = document.createElement('div'); 
+        contentWrap.className = "Popular-Questions-Content-Wrap";
+        commonWrap.appendChild(contentWrap);
+
+
+
+
+    })
+}
+
+displayPopularQuestions()
+
 
 const marker = document.getElementById("emailValidationMarker");
 

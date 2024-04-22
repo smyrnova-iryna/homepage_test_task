@@ -1,4 +1,5 @@
 .Main-Page {
+  font-family: "Noto Sans", sans-serif;
   background-image: url("../data/main_page_baackground.png");
   background-size: cover;
   background-position: center;
@@ -139,6 +140,7 @@
 }
 
 .Offers-Page {
+  font-family: "Noto Sans", sans-serif;
   background-color: #f8f8f8;
   padding: 30px;
 }
@@ -190,6 +192,9 @@
   background-color: #f8f8f8;
   height: 48px;
   justify-content: space-between;
+}
+.Select-Button:disabled {
+  opacity: 40%;
 }
 .Select-Button:focus, .Select-Button::before {
   box-shadow: none;
@@ -277,6 +282,9 @@
   border: none;
   background-color: #df4e3c;
   color: #f8f8f8;
+}
+.Extra-Cars-Button:disabled {
+  opacity: 40%;
 }
 .Extra-Cars-Button:focus, .Extra-Cars-Button::before {
   box-shadow: none;
@@ -541,6 +549,7 @@
   gap: 20px;
   font-size: 15px;
   font-weight: 400;
+  font-family: "Noto Sans", sans-serif;
 }
 
 .Subscribe-Section {
@@ -600,6 +609,9 @@
   font-size: 15px;
   height: 54px;
 }
+.Subscribe-Section-Button:disabled, .Subscribe-Section-Input:disabled {
+  opacity: 40%;
+}
 .Subscribe-Section-Button:focus, .Subscribe-Section-Button::before, .Subscribe-Section-Input:focus, .Subscribe-Section-Input::before {
   box-shadow: none;
   outline: none;
@@ -658,6 +670,9 @@
   border: 1px solid #8d8d8d;
   border-left: none;
 }
+.Subscribe-Section-Input-Validation-Sign:disabled {
+  opacity: 40%;
+}
 .Subscribe-Section-Input-Validation-Sign:focus, .Subscribe-Section-Input-Validation-Sign::before {
   box-shadow: none;
   outline: none;
@@ -683,6 +698,104 @@
     width: 505px;
   }
 }
+.Popular-Questions {
+  font-family: "Noto Sans", sans-serif;
+  color: #000000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  background-color: #f8f8f8;
+}
+@media screen and (min-width: 1080px) {
+  .Popular-Questions {
+    padding: 100px 310px 150px 310px;
+  }
+}
+
+.Popular-Questions-Heading {
+  text-transform: uppercase;
+  text-align: center;
+}
+@media screen and (min-width: 576px) {
+  .Popular-Questions-Heading {
+    margin-bottom: 60px;
+  }
+}
+
+.Popular-Questions-Container {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 345px) {
+  .Popular-Questions-Container {
+    width: 300px;
+  }
+}
+@media screen and (min-width: 576px) {
+  .Popular-Questions-Container {
+    width: 500px;
+  }
+}
+@media screen and (min-width: 1080px) {
+  .Popular-Questions-Container {
+    width: 820px;
+  }
+}
+
+.Popular-Questions-Heading-Wrap {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 14px;
+  cursor: pointer;
+  justify-content: space-between;
+  border-bottom: 1px solid #C4C4C4;
+}
+@media screen and (min-width: 345px) {
+  .Popular-Questions-Heading-Wrap {
+    gap: 8px;
+  }
+}
+@media screen and (min-width: 576px) {
+  .Popular-Questions-Heading-Wrap {
+    padding: 24px;
+    height: 72px;
+  }
+}
+@media screen and (min-width: 1080px) {
+  .Popular-Questions-Heading-Wrap {
+    width: 820px;
+  }
+}
+
+.Popular-Questions-Content-Wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 0 24px 24px 24px;
+  display: none;
+}
+
+.Popular-Questions-Content {
+  font-size: 13px;
+  font-weight: 400;
+  margin: 0;
+}
+
+.Popular-Questions-Title {
+  color: #000000;
+  font-weight: 500;
+  font-size: 14px;
+}
+@media screen and (min-width: 576px) {
+  .Popular-Questions-Title {
+    font-size: 17px;
+  }
+}
+
 .Footer {
   background-color: #000000;
   padding: 30px;

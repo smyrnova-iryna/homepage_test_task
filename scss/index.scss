@@ -14,8 +14,11 @@ $h2-option: #aeaeae;
 $text-possible-option: #8d8d8d;
 $validator-color: #507a36;
 $error: #ff2307;
+
+
 $catalog-container-color: #FFFFFF;
 $input-border-color: #BDBDBD;
+$questions-border-color: #C4C4C4;
 
 $border-radius: 15px;
 
@@ -40,8 +43,15 @@ $border-radius: 15px;
   font-size: 15px;
 }
 
+@mixin disabled-button {
+  &:disabled {
+    opacity: 40%;
+  }
+}
+
 @mixin button-styles {
   @include common-text();
+  @include disabled-button();
   border-radius: $border-radius;
   padding: 16px;
   display: flex;
@@ -51,12 +61,6 @@ $border-radius: 15px;
   &:focus, &::before{
     box-shadow: none;
     outline: none;
-  }
-}
-
-@mixin disabled-button {
-  &:disabled {
-    opacity: 40%;
   }
 }
 
@@ -85,6 +89,7 @@ $border-radius: 15px;
 
 // Main page styles
 .Main-Page {
+  font-family: $main-font-family;
   background-image: url("../data/main_page_baackground.png");
   background-size: cover;
   background-position: center;
@@ -197,6 +202,7 @@ $border-radius: 15px;
 
 // Offers Page styles
 .Offers-Page {
+  font-family: $main-font-family;
   background-color: $background;
   padding: 30px;
   @media screen and (min-width: 576px) {
@@ -501,6 +507,8 @@ $border-radius: 15px;
 }
 
 
+// Subscribe section styles
+
 
 .Subscribe-Section, .Subscribe-Section-Text-Container {
   display: flex;
@@ -508,6 +516,7 @@ $border-radius: 15px;
   gap: 20px;
   font-size: 15px;
   font-weight: 400;
+  font-family: $main-font-family;
 }
 
 .Subscribe-Section {
@@ -617,6 +626,99 @@ $border-radius: 15px;
     width: 505px;
   }
 }
+
+
+
+// Popular Questions styles
+
+.Popular-Questions {
+  font-family: $main-font-family;
+  color: $text-color;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  background-color: $background;
+
+  @media screen and (min-width: 1080px) {
+    padding: 100px 310px 150px 310px; 
+  }
+}
+
+.Popular-Questions-Heading {
+  text-transform: uppercase;
+  text-align: center;
+  @media screen and (min-width: 576px) {
+    margin-bottom: 60px;
+  }
+}
+
+
+.Popular-Questions-Container {
+  display: flex;
+  flex-direction: column;
+  @media screen and (min-width: 345px) {
+    width: 300px;
+  }
+  @media screen and (min-width: 576px) {
+    width: 500px;
+  }
+  @media screen and (min-width: 1080px) {
+    width: 820px;
+  }
+  
+}
+
+
+.Popular-Questions-Heading-Wrap {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding:  14px;
+  cursor: pointer;
+  justify-content: space-between;
+  border-bottom: 1px solid $questions-border-color;
+
+  @media screen and (min-width: 345px) {
+    gap: 8px
+  }
+
+  @media screen and (min-width: 576px) {
+    padding:  24px;
+    height: 72px;
+  }
+
+  @media screen and (min-width: 1080px) {
+    width: 820px;
+  }
+}
+
+.Popular-Questions-Content-Wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 0 24px 24px 24px;
+  display: none;
+}
+
+.Popular-Questions-Content {
+  font-size: 13px;
+  font-weight: 400;
+  margin: 0;
+}
+
+.Popular-Questions-Title {
+   color: $text-color;
+   font-weight: 500;
+   font-size: 14px;
+   @media screen and (min-width: 576px) {
+    font-size: 17px;
+  }
+}
+
+
 
 // Footer styles
 
