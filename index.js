@@ -904,11 +904,6 @@ const createDropdownItems = (data, id, buttonTextId, containerId, arrowId, headi
 
     }
     li.onclick = liClickHandler;
-    
-    if (data === sortOptions) {
-        // dropdownContent.className = "Sort-Container"
-        console.log(data === sortOptions)
-    }
     if (item.value !== sortOptions[0].value) {
         dropdownContent.appendChild(li);
     
