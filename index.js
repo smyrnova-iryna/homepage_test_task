@@ -783,11 +783,17 @@ const createDropdownItems = (data, id, buttonTextId, containerId, arrowId, headi
     const li = document.createElement('li');
     li.textContent = item.value;
     li.className = "Dropdown-Item";
+
+    if (data === sortOptions) {
+        li.className = "Dropdown-Item Sort-Item";
+    }
+
     if (item.id === 9) {
         li.id = "elementToBeChanged";
         li.style = "display: none"
     }
 
+    
     const liClickHandler = () => {
         const buttonText = document.getElementById(buttonTextId);
         buttonText.innerHTML = item.value;
@@ -898,6 +904,11 @@ const createDropdownItems = (data, id, buttonTextId, containerId, arrowId, headi
 
     }
     li.onclick = liClickHandler;
+    
+    if (data === sortOptions) {
+        // dropdownContent.className = "Sort-Container"
+        console.log(data === sortOptions)
+    }
     if (item.value !== sortOptions[0].value) {
         dropdownContent.appendChild(li);
     

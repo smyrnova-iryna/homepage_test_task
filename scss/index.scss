@@ -366,10 +366,12 @@ $border-radius: 15px;
   border-top: 1px solid $text-possible-option;
   border-top-left-radius: $border-radius;
   border-top-right-radius: $border-radius;
-  top: 20px;
-  left: 60px;
+  top: 26px;
+  left: 50px;
   width: 191px;
   padding: 6px 12px;
+  border: none;
+  background-color: #FFFFFF;
   @media screen and (min-width: 576px) {
     left: 70px;
   }
@@ -505,6 +507,15 @@ $border-radius: 15px;
     text-decoration: underline;
   }
 }
+
+.Sort-Item {
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+// .Sort-Container {
+//   background-color: red;
+// }
 
 
 // Subscribe section styles
